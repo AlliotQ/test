@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8">
+        <meta charset="utf-8">
+        <title>月曜日のたわわ</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+		<style type="text/css">
+			#bgd {width:100%;max-width:1330px;margin: 0px auto;position: relative;}
+			#img {width:100%;}
+			#vd	{position: absolute;top: 521px;right: 243px;transform:rotate(-12.4deg);}
+			iframe {filter: sepia() hue-rotate(175deg);}
+		</style>
+		<script>
+		$(document).ready(function(){
+		  resize();
+		});
+		$(window).resize(function() {
+		  resize();
+		});
+		function resize(){
+			$('#vd').css('top', $('#bgd').width() * 0.728571 +'px')
+			$('#vd').css('right', $('#bgd').width() * 0.33985 +'px')
+			$('iframe').css('width', $('#bgd').width() * 0.240602 +'px')
+			$('iframe').css('height', $('#bgd').width() * 0.152632 +'px')
+		}
+		</script>
+    </head>
+    <body>
+	<div id="bgd">
+		<div id="vd">
+			<iframe width="172" height="109" src="https://www.youtube.com/embed/cfcqewZdBiU" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<img id="img" src="http://i.imgur.com/3paoSM1.jpg"><img>
+	</div>
+    </body>
+</html>
