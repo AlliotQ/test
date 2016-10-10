@@ -9,13 +9,22 @@
 			#bgd {width:100%;max-width:1330px;margin: 0px auto;position: relative;}
 			#img {width:100%;}
 			#vd	{position: absolute;top: 521px;right: 243px;transform:rotate(-12.4deg);}
-			iframe {filter:sepia() hue-rotate(185deg) saturate(2) brightness(1) contrast(1.5);}
+			iframe {-webkit-filter:sepia() hue-rotate(165deg) saturate(1.4) brightness(1.1) contrast(0.75) url(#monochrome);
+			filter:sepia() hue-rotate(165deg) saturate(1.4) brightness(1.1) contrast(0.75) url(#monochrome);}
+			.defs-only {position: absolute;height: 0; width: 0;overflow: none;left: -100%;}
 		</style>
     </head>
     <body>
+	<svg class="defs-only">
+	  <filter id="monochrome" color-interpolation-filters="sRGB"
+			  x="0" y="0" height="100%" width="100%">
+		<feColorMatrix type="matrix"
+		  values="1 0 0 0 0        1 0 0 0 0.23         1 0 0 0 0.75        0    0 0 1 0" />
+	  </filter>
+	</svg>
 	<div id="bgd">
 		<div id="vd">
-			<iframe width="172" height="109" src="https://www.youtube.com/embed/cfcqewZdBiU?autoplay=1" frameborder="0" allowfullscreen></iframe>
+			<iframe width="172" height="109" src="https://www.youtube.com/embed/cfcqewZdBiU" frameborder="0" allowfullscreen></iframe>
 		</div>
 		<img id="img" src="tawawa.jpg"><img>
 	</div>
